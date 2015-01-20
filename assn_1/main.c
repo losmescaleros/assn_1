@@ -440,9 +440,10 @@ PrintResults(timeval *startTime, timeval *endTime, int S[], int hit[], long seek
 		}
 		printf("%12d: %s\n", S[i], hitString.c_str());
 	}
-
-	int secElapsed = endTime->tv_sec - startTime->tv_sec;
-	int usecElapsed = endTime->tv_usec - startTime->tv_usec;
-
-	printf("Time: %1d.%06d\n", secElapsed, usecElapsed);
+	long elapsed = (endTime->tv_usec + 1000000 * endTime->tv_sec) -
+		(startTime->tv_usec + 1000000 * startTime->tv_sec);
+	timeval diff;
+	diff.tv_sec = elapsed / 1000000;
+	diff.tv_usec = elapsed % 1000000;
+	printf("Time: %ld.%06ld\n", diff.tv_sec, diff.tv_usec);
 }
