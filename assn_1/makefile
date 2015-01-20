@@ -6,8 +6,8 @@ CC = g++
 CFLAGS = -c -Wall
 # Files
 OUT_FILE = output.txt
-KEY_DB = key.db
-SEEK_DB = seek.db
+KEY_DB = data/example/key.db
+SEEK_DB = data/example/seek.db
 EXAMPLE_OUT_FILE = data/example/output.txt
 TEST_RESULTS = test_results.txt
 
