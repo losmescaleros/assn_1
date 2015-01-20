@@ -3,4 +3,5 @@
 #define ON_DISK_LINEAR_SEARCH "--disk-lin"
 #define ON_DISK_BINARY_SEARCH "--disk-bin"
 
-#define ERROR -1
+#define EXIT_ERROR -1
+#define EXIT_SUCCESS 0
