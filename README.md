@@ -5,7 +5,7 @@ CSC 541, Assignment 1
 
 ## Introduction
 
-This project serves as an introduction to random-access file I/O in UNIX
+This C++ project serves as an introduction to random-access file I/O in UNIX
 using C, as well as an investigation of time efficiency isssues associated
 with in-memory versus disk-based searching. Two different databases have
 been provided, seek.db and key.db. These both contain lists of integers in
@@ -40,6 +40,11 @@ $ ./assn_1 search_mode key_db seek_db
 ```key_db``` and ```seek_db``` are the respective key and seek databases
 containing binary integer data. 
 
+### Target Environment
+
+Per class requirements, this project has been targeted for a UNIX platform
+and gcc compiler 3.4.6. 
+
 ## Program Output
 
 The program will go through each integer in the seek database and search
@@ -62,4 +67,18 @@ complete, as follows:
 An example seek and key database have been provided, as well as an 
 example of what the output should look like. These can be found in the
 ```data/example``` folder of this project.
+
+The provided makefile can be used to test each of the four search 
+strategies implemented. 
+
+```
+$ make test
+```
+
+The above command will run each search method against the example
+databases provided, outputting to ```output.txt```. The output will then
+be diff'ed against the example output, and the results of the diff
+will be written to ```test_results.txt```. Note that the output file
+is deleted with each search run, and this file is deleted after the last
+search. 
 
