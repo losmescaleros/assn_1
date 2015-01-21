@@ -40,6 +40,10 @@ $ ./assn_1 search_mode key_db seek_db
 ```key_db``` and ```seek_db``` are the respective key and seek databases
 containing binary integer data. 
 
+### Source Code
+
+Source code for the project is found in main.c and main.h. 
+
 ### Target Environment
 
 Per class requirements, this project has been targeted for a UNIX platform
